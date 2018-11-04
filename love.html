@@ -26,13 +26,7 @@
             color: #ebf7f4;
         }
 
-        .body--ready {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-        }
+        
 
         .text {
             position: fixed;
@@ -54,8 +48,6 @@
             border: 3px solid #00a0ff;
             opacity: 1;
             margin: 0 auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
             transition: all 1.0s;
         }
 
@@ -80,7 +72,7 @@
 
         .text {
             position: fixed;
-            bottom: 80px;
+            bottom: 20px;
             text-align: center;
             width: 100%;
             font-weight: bold;
@@ -109,7 +101,7 @@
     <img src="lby.png" id="logo">
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
-<p class="text" style="color: #ed3073;">
+<p class="text" >
 	Happy birthday to Lby
 	<br/>
     We fell in love
@@ -181,8 +173,8 @@
                 requestFrame.call(window, this.loop.bind(this));
             },
             adjustCanvas: function () {
-                canvas.width = window.innerWidth - 100;
-                canvas.height = window.innerHeight - 30;
+                canvas.width = window.innerWidth - 80;
+                canvas.height = window.innerHeight - 0;
             },
             clearFrame: function () {
                 context.clearRect(0, 0, canvas.width, canvas.height);
@@ -453,7 +445,6 @@
         function fit() {
             shapeCanvas.width = Math.floor(window.innerWidth / gap) * gap;
             shapeCanvas.height = Math.floor(window.innerHeight / gap) * gap;
-            shapeContext.fillStyle = 'red';
             shapeContext.textBaseline = 'middle';
             shapeContext.textAlign = 'center';
         }
